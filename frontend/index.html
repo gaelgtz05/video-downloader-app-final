@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>Descargar Video y Audio</h1>
+
+        <input type="text" id="urlInput" placeholder="Pega el enlace del video aquí (YouTube, TikTok, Instagram...)">
+
+        <div class="format-options">
+            <label>
+                <input type="radio" name="format" value="mp4" checked> MP4 (1080p Máx.)
+            </label>
+            <label>
+                <input type="radio" name="format" value="mp3"> MP3 (Solo Audio)
+            </label>
+        </div>
+
+        <button id="downloadButton">Descargar</button>
+
+        <div class="progress-area">
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar-fill"></div>
+            </div>
+            <p id="statusMessage">Esperando enlace...</p>
+            <a id="downloadLink" href="#" target="_blank" style="display: none;"></a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
